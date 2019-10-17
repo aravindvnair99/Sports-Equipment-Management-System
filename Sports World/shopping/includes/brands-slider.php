@@ -6,19 +6,19 @@
 					<a href="#" class="image">
 						<img data-echo="brandsimage/bl1.png" src="assets/images/blank.gif" alt="">
 					</a>	
-				</div><!--/.item-->
+				</div>
 
 				<div class="item">
 					<a href="#" class="image">
 						<img data-echo="brandsimage/bl2.png" src="assets/images/blank.gif" alt="">
 					</a>	
-				</div><!--/.item-->
+				</div>
 
 				<div class="item">
 					<a href="#" class="image">
 						<img data-echo="brandsimage/bl3.png" src="assets/images/blank.gif" alt="">
 					</a>	
-				</div><!--/.item-->
+				</div>
 
 				<div class="item">
 					<a href="#" class="image">
@@ -88,7 +88,7 @@
 
 
 
-		    </div><!-- /.owl-carousel #logo-slider -->
-		</div><!-- /.logo-slider-inner -->
+		    </div>
+		</div>
 	
-</div><!-- /.logo-slider -->
+</div>

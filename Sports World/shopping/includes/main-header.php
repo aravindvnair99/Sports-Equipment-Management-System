@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-xs-12 col-sm-12 col-md-3 logo-holder">
-					<!-- ============================================================= LOGO ============================================================= -->
+					
 <div class="logo">
 	<a href="index.php" style="color: #0E5AA6" >
 		
@@ -36,11 +36,11 @@
 
         </div>
     </form>
-</div><!-- /.search-area -->
-<!-- ============================================================= SEARCH AREA : END ============================================================= -->				</div><!-- /.top-search-holder -->
+</div>
+		</div>
 
 				<div class="col-xs-12 col-sm-12 col-md-3 animate-dropdown top-cart-row">
-					<!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+					
 <?php
 if(!empty($_SESSION['cart'])){
 	?>
@@ -97,7 +97,7 @@ if(!empty($_SESSION['cart'])){
 						</div>
 						
 					</div>
-				</div><!-- /.cart-item -->
+				</div>
 			
 				<?php } }?>
 				<div class="clearfix"></div>
@@ -113,12 +113,12 @@ if(!empty($_SESSION['cart'])){
 				<div class="clearfix"></div>
 					
 				<a href="my-cart.php" class="btn btn-upper btn-primary btn-block m-t-20">My Cart</a>	
-			</div><!-- /.cart-total-->
+			</div>
 					
 				
 		</li>
-		</ul><!-- /.dropdown-menu-->
-	</div><!-- /.dropdown-cart -->
+		</ul>
+	</div>
 <?php } else { ?>
 <div class="dropdown dropdown-cart">
 		<a href="#" class="dropdown-toggle lnk-cart" data-toggle="dropdown">
@@ -151,7 +151,7 @@ if(!empty($_SESSION['cart'])){
 						
 						
 					</div>
-				</div><!-- /.cart-item -->
+				</div>
 			
 				
 			<hr>
@@ -160,21 +160,19 @@ if(!empty($_SESSION['cart'])){
 				
 				<div class="clearfix"></div>
 					
-				<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue Shooping</a>	
-			</div><!-- /.cart-total-->
+				<a href="index.php" class="btn btn-upper btn-primary btn-block m-t-20">Continue Shopping</a>	
+			</div>
 					
 				
 		</li>
-		</ul><!-- /.dropdown-menu-->
+		</ul>
 	</div>
 	<?php }?>
 
 
 
+				</div>
+			</div>
 
-<!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->				</div><!-- /.top-cart-row -->
-			</div><!-- /.row -->
-
-		</div><!-- /.container -->
-
+		</div>
 	</div>

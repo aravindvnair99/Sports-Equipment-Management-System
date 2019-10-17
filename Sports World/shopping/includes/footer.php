@@ -3,7 +3,7 @@
         <div class="container">
             <div class="row">
             	<div class="col-xs-12 col-sm-6 col-md-4">
-            		 <!-- ============================================================= CONTACT INFO ============================================================= -->
+            		 
 <div class="contact-info">
     <div class="footer-logo">
         <div class="logo">
@@ -11,9 +11,9 @@
                 
 <h3>SPORTS WORLD</h3>
             </a>
-        </div><!-- /.logo -->
+        </div>
     
-    </div><!-- /.footer-logo -->
+    </div>
 
      <div class="module-body m-t-20">
         <p class="about-us"> Nam libero tempore, cum soluta nobis est ses  eligendi optio cumque cum soluta nobis est ses  eligendi optio cumque.</p>
@@ -26,18 +26,18 @@
         <a href="#"><i class="icon fa fa-rss"></i></a>
         <a href="#"><i class="icon fa fa-pinterest"></i></a>
 
-        </div><!-- /.social-icons -->
-    </div><!-- /.module-body -->
+        </div>
+    </div>
 
-</div><!-- /.contact-info -->
-<!-- ============================================================= CONTACT INFO : END ============================================================= -->            	</div><!-- /.col -->
+</div>
+            	</div>
 
             	<div class="col-xs-12 col-sm-6 col-md-4">
-            		 <!-- ============================================================= CONTACT TIMING============================================================= -->
+            		 
 <div class="contact-timing">
 	<div class="module-heading">
 		<h4 class="module-title">opening time</h4>
-	</div><!-- /.module-heading -->
+	</div>
 
 	<div class="module-body outer-top-xs">
 		<div class="table-responsive">
@@ -48,17 +48,16 @@
 					<tr><td>Sunday:</td><td class="pull-right">10.00 To 20.00</td></tr>
 				</tbody>
 			</table>
-		</div><!-- /.table-responsive -->
-	</div><!-- /.module-body -->
-</div><!-- /.contact-timing -->
-<!-- ============================================================= CONTACT TIMING : END ============================================================= -->            	</div><!-- /.col -->
-
+		</div>
+	</div>
+</div>
+          	</div>
             	<div class="col-xs-12 col-sm-6 col-md-4">
-            		 <!-- ============================================================= INFORMATION============================================================= -->
+            		 
 <div class="contact-information">
 	<div class="module-heading">
 		<h4 class="module-title">information</h4>
-	</div><!-- /.module-heading -->
+	</div>
 
 	<div class="module-body outer-top-xs">
         <ul class="toggle-footer" style="">
@@ -99,11 +98,11 @@
             </li>
               
             </ul>
-    </div><!-- /.module-body -->
-</div><!-- /.contact-timing -->
-<!-- ============================================================= INFORMATION : END ============================================================= -->            	</div><!-- /.col -->
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </div><!-- /.links-social -->
+    </div>
+</div>
+           	</div>
+            </div>
+        </div>
+    </div>
 
     

@@ -1,5 +1,5 @@
 	<div class="col-md-4">
-					<!-- checkout-progress-sidebar -->
+					
 <div class="checkout-progress-sidebar ">
 	<div class="panel-group">
 		<div class="panel panel-default">
@@ -17,4 +17,4 @@
 		</div>
 	</div>
 </div> 
-<!-- checkout-progress-sidebar -->				</div>
+			</div>

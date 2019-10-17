@@ -29,7 +29,7 @@ while($row=mysqli_fetch_array($sql))
 			<?php } ?>
 
 			
-		</ul><!-- /.navbar-nav -->
+		</ul>
 		<div class="clearfix"></div>				
 	</div>
 </div>
