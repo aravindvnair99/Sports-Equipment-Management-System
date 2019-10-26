@@ -153,7 +153,7 @@ if(!empty($_SESSION['cart'])){
 			<tbody>
  <?php
  $pdtid=array();
-    $sql = "SELECT * FROM products WHERE id IN(";
+    $sql = "SELECT * FROM products natural join productimg WHERE id IN(";
 			foreach($_SESSION['cart'] as $id => $value){
 			$sql .=$id. ",";
 			}

@@ -161,7 +161,7 @@ if(isset($_GET['action']) && $_GET['action']=="add"){
 					<div class="product-slider">
 						<div class="owl-carousel home-owl-carousel custom-carousel owl-theme" data-item="4">
 <?php
-$ret=mysqli_query($con,"select * from products");
+$ret=mysqli_query($con,"select * from products natural join productimg");
 while ($row=mysqli_fetch_array($ret)) 
 {
 
@@ -332,7 +332,7 @@ while ($row=mysqli_fetch_array($ret))
 	                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	   
 <?php
-$ret=mysqli_query($con,"select * from products where category=8");
+$ret=mysqli_query($con,"select * from products natural join productimg where category=8");
 while ($row=mysqli_fetch_array($ret)) 
 {
 ?>
@@ -380,7 +380,7 @@ while ($row=mysqli_fetch_array($ret))
 							<h3 class="section-title">Indoor & Outdoor</h3>
 		                   	<div class="owl-carousel homepage-owl-carousel custom-carousel outer-top-xs owl-theme" data-item="2">
 	<?php
-$ret=mysqli_query($con,"select * from products where category=9 or category=10");
+$ret=mysqli_query($con,"select * from products natural join productimg where category=9 or category=10");
 while ($row=mysqli_fetch_array($ret)) 
 {
 ?>
@@ -434,7 +434,7 @@ while ($row=mysqli_fetch_array($ret))
 		<h3 class="section-title" style="color:black;">Shoes</h3>
 		<div class="owl-carousel best-seller custom-carousel owl-theme outer-top-xs">
 			<?php
-$ret=mysqli_query($con,"select * from products where category=7");
+$ret=mysqli_query($con,"select * from products natural join productimg where category=7");
 while ($row=mysqli_fetch_array($ret)) 
 {
 

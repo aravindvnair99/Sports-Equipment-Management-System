@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Oct 15, 2019 at 04:15 PM
+-- Generation Time: Oct 26, 2019 at 09:18 AM
 -- Server version: 10.4.6-MariaDB
 -- PHP Version: 7.3.9
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `shopping`
+-- Database: `sportsworld`
 --
 
 -- --------------------------------------------------------
@@ -83,21 +83,6 @@ CREATE TABLE `orders` (
   `orderStatus` varchar(55) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `orders`
---
-
-INSERT INTO `orders` (`id`, `userId`, `productId`, `quantity`, `orderDate`, `paymentMethod`, `orderStatus`) VALUES
-(1, 1, '3', 1, '2017-03-07 19:32:57', 'COD', NULL),
-(3, 1, '4', 1, '2017-03-10 19:43:04', 'Debit / Credit card', 'Delivered'),
-(4, 1, '17', 1, '2017-03-08 16:14:17', 'COD', 'in Process'),
-(5, 1, '3', 1, '2017-03-08 19:21:38', 'COD', NULL),
-(6, 1, '4', 1, '2017-03-08 19:21:38', 'COD', NULL),
-(7, 4, '2', 1, '2019-10-11 15:04:36', 'Internet Banking', 'Delivered'),
-(8, 4, '3', 3, '2019-10-11 15:37:58', 'COD', 'Delivered'),
-(9, 4, '33', 1, '2019-10-12 10:15:38', 'COD', 'Delivered'),
-(10, 4, '33', 1, '2019-10-13 06:26:20', 'COD', NULL);
-
 -- --------------------------------------------------------
 
 --
@@ -112,17 +97,28 @@ CREATE TABLE `ordertrackhistory` (
   `postingDate` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `ordertrackhistory`
+-- Table structure for table `productimg`
 --
 
-INSERT INTO `ordertrackhistory` (`id`, `orderId`, `status`, `remark`, `postingDate`) VALUES
-(1, 2, 'in Process', 'Order has been Shipped.', '2017-03-10 19:36:45'),
-(2, 1, 'Delivered', 'Order Has been delivered', '2017-03-10 19:37:31'),
-(3, 3, 'Delivered', 'Product delivered successfully', '2017-03-10 19:43:04'),
-(4, 4, 'in Process', 'Product ready for Shipping', '2017-03-10 19:50:36'),
-(5, 7, 'Delivered', 'hZHhz', '2019-10-11 15:43:59'),
-(6, 9, 'Delivered', 'hghh', '2019-10-12 10:16:37');
+CREATE TABLE `productimg` (
+  `id` int(11) NOT NULL,
+  `productImage1` varchar(255) DEFAULT NULL,
+  `productImage2` varchar(255) DEFAULT NULL,
+  `productImage3` varchar(255) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `productimg`
+--
+
+INSERT INTO `productimg` (`id`, `productImage1`, `productImage2`, `productImage3`) VALUES
+(65, 'r2.2.png', 'wl2.3.png', 'wl2.3.png'),
+(66, 'g2.1.png', 's1.3.png', 'r2.1.png'),
+(67, 'wl2.3.png', 'g2.3.png', 'g2.2.png'),
+(68, 'b1.3.png', 'b1.2.png', 'b1.1.png');
 
 -- --------------------------------------------------------
 
@@ -157,9 +153,6 @@ CREATE TABLE `products` (
   `productPrice` int(11) DEFAULT NULL,
   `productPriceBeforeDiscount` int(11) DEFAULT NULL,
   `productDescription` longtext DEFAULT NULL,
-  `productImage1` varchar(255) DEFAULT NULL,
-  `productImage2` varchar(255) DEFAULT NULL,
-  `productImage3` varchar(255) DEFAULT NULL,
   `shippingCharge` int(11) DEFAULT NULL,
   `productAvailability` varchar(255) DEFAULT NULL,
   `postingDate` timestamp NULL DEFAULT current_timestamp(),
@@ -170,9 +163,36 @@ CREATE TABLE `products` (
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `category`, `subCategory`, `productName`, `productCompany`, `productPrice`, `productPriceBeforeDiscount`, `productDescription`, `productImage1`, `productImage2`, `productImage3`, `shippingCharge`, `productAvailability`, `postingDate`, `updationDate`) VALUES
-(59, 8, 18, 'GYM EQUIPMENTS', 'LI NING', 1500, 1999, 'gym equipments<br>', 'g2.3.png', 'g2.2.png', 'g2.1.png', 50, 'In Stock', '2019-10-15 10:13:17', NULL),
-(60, 8, 19, 'sdhsb', 'djhjdfh', 123, 1233, 'jdhfjf<br>', 'g2.2.png', 'wl2.3.png', 'g2.2.png', 20, 'In Stock', '2019-10-15 11:56:54', NULL);
+INSERT INTO `products` (`id`, `category`, `subCategory`, `productName`, `productCompany`, `productPrice`, `productPriceBeforeDiscount`, `productDescription`, `shippingCharge`, `productAvailability`, `postingDate`, `updationDate`) VALUES
+(65, 7, 13, 'sdkkjdk', 'ddd', 210, 1402, 'sddd<br>', 25, 'In Stock', '2019-10-25 14:08:35', NULL),
+(66, 7, 13, 'fjdfkjkdf', 'sfdjdj', 251, 1452, 'dfdsgfd<br>', 2541, 'In Stock', '2019-10-25 14:10:48', NULL),
+(67, 8, 18, 'WEIGHT GAIN TOOLS', 'LI NING', 1999, 2500, 'Gym Equipments<br>', 50, 'In Stock', '2019-10-25 14:49:34', NULL),
+(68, 10, 24, 'CORK BALL', 'SPARTAN', 499, 500, 'Cricket Ball<br>', 520, 'In Stock', '2019-10-25 14:51:38', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `shipbill`
+--
+
+CREATE TABLE `shipbill` (
+  `id` int(11) NOT NULL,
+  `shippingAddress` longtext DEFAULT NULL,
+  `shippingState` varchar(255) DEFAULT NULL,
+  `shippingCity` varchar(255) DEFAULT NULL,
+  `shippingPincode` int(11) DEFAULT NULL,
+  `billingAddress` longtext DEFAULT NULL,
+  `billingState` varchar(255) DEFAULT NULL,
+  `billingCity` varchar(255) DEFAULT NULL,
+  `billingPincode` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `shipbill`
+--
+
+INSERT INTO `shipbill` (`id`, `shippingAddress`, `shippingState`, `shippingCity`, `shippingPincode`, `billingAddress`, `billingState`, `billingCity`, `billingPincode`) VALUES
+(6, 'bfggggn', 'bhj', 'jbh', 585425, 'b b              h', '441', '414', 585426);
 
 -- --------------------------------------------------------
 
@@ -235,7 +255,20 @@ INSERT INTO `userlog` (`id`, `userEmail`, `userip`, `loginTime`, `logout`, `stat
 (27, 'nchethan14@gmail.com', 0x3a3a3100000000000000000000000000, '2019-10-11 15:03:07', '11-10-2019 09:04:50 PM', 1),
 (28, 'nchethan14@gmail.com', 0x3a3a3100000000000000000000000000, '2019-10-11 15:37:23', '11-10-2019 11:51:58 PM', 1),
 (29, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-12 10:15:08', NULL, 1),
-(30, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-13 06:25:57', '13-10-2019 11:58:05 AM', 1);
+(30, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-13 06:25:57', '13-10-2019 11:58:05 AM', 1),
+(31, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-25 15:03:34', '25-10-2019 11:05:53 PM', 1),
+(32, 'satish@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-25 17:41:17', '25-10-2019 11:18:32 PM', 1),
+(33, 'abcd@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-25 17:49:39', NULL, 1),
+(34, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 02:16:18', NULL, 1),
+(35, 'abcd@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 02:24:55', '26-10-2019 08:51:46 AM', 1),
+(36, 'abcd@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 03:21:55', '26-10-2019 09:40:26 AM', 1),
+(37, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 04:10:37', '26-10-2019 10:12:04 AM', 1),
+(38, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 04:42:28', '26-10-2019 10:21:50 AM', 1),
+(39, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 04:52:08', '26-10-2019 10:42:54 AM', 1),
+(40, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 05:13:08', '26-10-2019 10:50:30 AM', 1),
+(41, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 05:20:37', '26-10-2019 11:23:26 AM', 1),
+(42, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 05:53:44', '26-10-2019 11:27:08 AM', 1),
+(43, 'nchethan14@gmail.com', 0x3132372e302e302e3100000000000000, '2019-10-26 06:18:17', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -249,14 +282,6 @@ CREATE TABLE `users` (
   `email` varchar(255) DEFAULT NULL,
   `contactno` bigint(11) DEFAULT NULL,
   `password` varchar(255) DEFAULT NULL,
-  `shippingAddress` longtext DEFAULT NULL,
-  `shippingState` varchar(255) DEFAULT NULL,
-  `shippingCity` varchar(255) DEFAULT NULL,
-  `shippingPincode` int(11) DEFAULT NULL,
-  `billingAddress` longtext DEFAULT NULL,
-  `billingState` varchar(255) DEFAULT NULL,
-  `billingCity` varchar(255) DEFAULT NULL,
-  `billingPincode` int(11) DEFAULT NULL,
   `regDate` timestamp NOT NULL DEFAULT current_timestamp(),
   `updationDate` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -265,8 +290,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `contactno`, `password`, `shippingAddress`, `shippingState`, `shippingCity`, `shippingPincode`, `billingAddress`, `billingState`, `billingCity`, `billingPincode`, `regDate`, `updationDate`) VALUES
-(4, 'Chethan', 'nchethan14@gmail.com', 8762293306, '25f9e794323b453885f5181f1b624d0b', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2019-10-11 03:10:47', NULL);
+INSERT INTO `users` (`id`, `name`, `email`, `contactno`, `password`, `regDate`, `updationDate`) VALUES
+(4, 'Chethan', 'nchethan14@gmail.com', 8762293306, '25f9e794323b453885f5181f1b624d0b', '2019-10-11 03:10:47', NULL),
+(5, 'Satish', 'satish@gmail.com', 7894561230, '25f9e794323b453885f5181f1b624d0b', '2019-10-25 17:39:29', NULL),
+(6, 'abcd', 'abcd@gmail.com', 7894561230, '25f9e794323b453885f5181f1b624d0b', '2019-10-25 17:49:18', NULL);
 
 -- --------------------------------------------------------
 
@@ -317,6 +344,12 @@ ALTER TABLE `ordertrackhistory`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `productimg`
+--
+ALTER TABLE `productimg`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `productreviews`
 --
 ALTER TABLE `productreviews`
@@ -326,6 +359,12 @@ ALTER TABLE `productreviews`
 -- Indexes for table `products`
 --
 ALTER TABLE `products`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `shipbill`
+--
+ALTER TABLE `shipbill`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -372,7 +411,7 @@ ALTER TABLE `category`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
 -- AUTO_INCREMENT for table `ordertrackhistory`
@@ -390,7 +429,7 @@ ALTER TABLE `productreviews`
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=61;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=69;
 
 --
 -- AUTO_INCREMENT for table `subcategory`
@@ -402,19 +441,35 @@ ALTER TABLE `subcategory`
 -- AUTO_INCREMENT for table `userlog`
 --
 ALTER TABLE `userlog`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `productimg`
+--
+ALTER TABLE `productimg`
+  ADD CONSTRAINT `productimg_ibfk_1` FOREIGN KEY (`id`) REFERENCES `products` (`id`);
+
+--
+-- Constraints for table `shipbill`
+--
+ALTER TABLE `shipbill`
+  ADD CONSTRAINT `shipbill_ibfk_1` FOREIGN KEY (`id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

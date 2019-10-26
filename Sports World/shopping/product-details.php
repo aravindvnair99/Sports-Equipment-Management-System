@@ -143,7 +143,7 @@ while($row=mysqli_fetch_array($sql))
 	<div class="owl-carousel sidebar-carousel custom-carousel owl-theme outer-top-xs">
 		
 								   <?php
-$ret=mysqli_query($con,"select * from products order by rand() limit 4 ");
+$ret=mysqli_query($con,"select * from products natural join productimg order by rand() limit 4 ");
 while ($rws=mysqli_fetch_array($ret)) {
 
 ?>
@@ -180,7 +180,7 @@ while ($rws=mysqli_fetch_array($ret)) {
 									<button class="btn btn-primary icon" data-toggle="dropdown" type="button">
 								<i class="fa fa-shopping-cart"></i>													
 							</button>
-						<a href="product-details.php?page=product&action=add&id=<?php echo $rws['id']; ?>" class="lnk btn btn-primary">Add to cart</a>
+						<a href="product-details.php?pid=<?php echo htmlentities($rws['id']);?>"class="lnk btn btn-primary">Add to cart</a>
 													
 															
 								</div>
@@ -199,7 +199,7 @@ while ($rws=mysqli_fetch_array($ret)) {
 				</div>
 			</div>
 <?php 
-$ret=mysqli_query($con,"select * from products where id='$pid'");
+$ret=mysqli_query($con,"select * from products natural join productimg where id='$pid'");
 while($row=mysqli_fetch_array($ret))
 {
 
@@ -572,11 +572,11 @@ while($rvw=mysqli_fetch_array($qry))
 <?php $cid=$row['category'];
 			$subcid=$row['subCategory']; } ?>
 <section class="section featured-product wow fadeInUp">
-	<h3 class="section-title">Realted Products </h3>
+	<h3 class="section-title">Related Products </h3>
 	<div class="owl-carousel home-owl-carousel upsell-product custom-carousel owl-theme outer-top-xs">
 	   
 		<?php 
-$qry=mysqli_query($con,"select * from products where subCategory='$subcid' and category='$cid'");
+$qry=mysqli_query($con,"select * from products natural join productimg where subCategory='$subcid' and category='$cid'");
 while($rw=mysqli_fetch_array($qry))
 {
 

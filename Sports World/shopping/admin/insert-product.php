@@ -11,12 +11,6 @@ else{
 if(isset($_POST['submit']))
 {
 
-
-
-
-
-
-
 	$category=$_POST['category'];
 	$subcat=$_POST['subcategory'];
 	$productname=$_POST['productName'];
@@ -40,7 +34,16 @@ if(!is_dir($dir)){
 	move_uploaded_file($_FILES["productimage1"]["tmp_name"],"productimages/$productid/".$_FILES["productimage1"]["name"]);
 	move_uploaded_file($_FILES["productimage2"]["tmp_name"],"productimages/$productid/".$_FILES["productimage2"]["name"]);
 	move_uploaded_file($_FILES["productimage3"]["tmp_name"],"productimages/$productid/".$_FILES["productimage3"]["name"]);
-$sql=mysqli_query($con,"insert into products(category,subCategory,productName,productCompany,productPrice,productDescription,shippingCharge,productAvailability,productImage1,productImage2,productImage3,productPriceBeforeDiscount) values('$category','$subcat','$productname','$productcompany','$productprice','$productdescription','$productscharge','$productavailability','$productimage1','$productimage2','$productimage3','$productpricebd')");
+$sql="insert into products(category,subCategory,productName,productCompany,productPrice,productDescription,shippingCharge,productAvailability,productPriceBeforeDiscount) values('$category','$subcat','$productname','$productcompany','$productprice','$productdescription','$productscharge','$productavailability','$productpricebd')";
+$q=mysqli_query($con,$sql);
+
+if($q){
+$sql2="insert into productimg(id,productImage1,productImage2,productImage3)values('$productid','$productimage1','$productimage2','$productimage3')";
+$r=mysqli_query($con,$sql2);
+echo "success";
+}
+
+
 $_SESSION['msg']="Product Inserted Successfully !!";
 
 }

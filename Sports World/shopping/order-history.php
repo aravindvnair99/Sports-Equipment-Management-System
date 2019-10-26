@@ -7,7 +7,8 @@ if(strlen($_SESSION['login'])==0)
 header('location:login.php');
 }
 else{
-
+	
+	
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -84,6 +85,8 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 	<div class="table-responsive">
 <form name="cart" method="post">	
 
+
+
 		<table class="table table-bordered">
 			<thead>
 				<tr>
@@ -93,7 +96,7 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			
 					<th class="cart-qty item">Quantity</th>
 					<th class="cart-sub-total item">Price Per unit</th>
-					<th class="cart-sub-total item">Shipping Charge</th>
+					<!-- <th class="cart-sub-total item">Shipping Charge</th> -->
 					<th class="cart-total item">Grandtotal</th>
 					<th class="cart-total item">Payment Method</th>
 					<th class="cart-description item">Order Date</th>
@@ -103,7 +106,12 @@ popUpWin = open(URLStr,'popUpWin', 'toolbar=no,location=no,directories=no,status
 			
 			<tbody>
 
-<?php $query=mysqli_query($con,"select products.productImage1 as pimg1,products.productName as pname,products.id as proid,orders.productId as opid,orders.quantity as qty,products.productPrice as pprice,products.shippingCharge as shippingcharge,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.userId='".$_SESSION['id']."' and orders.paymentMethod is not null");
+<?php 
+// $query=mysqli_query($con,"select productimg.productImage1 as pimg1,products.productName as pname,products.id as proid,orders.productId as opid,orders.quantity as qty,products.productPrice as pprice,products.shippingCharge as shippingcharge,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from orders join products on orders.productId=products.id where orders.userId='".$_SESSION['id']."' and orders.paymentMethod is not null");
+$query=mysqli_query($con,"select productimg.productImage1 as pimg1,products.productName as pname,orders.productId as opid,orders.quantity as qty,products.productPrice as pprice,orders.paymentMethod as paym,orders.orderDate as odate,orders.id as orderid from (products NATURAL join productimg) INNER join orders on orders.productId=products.id where orders.userId='".$_SESSION['id']."' and orders.paymentMethod is not null");
+// $q = "select orderDate from orders";
+
+
 $cnt=1;
 while($row=mysqli_fetch_array($query))
 {
@@ -112,8 +120,9 @@ while($row=mysqli_fetch_array($query))
 					<td><?php echo $cnt;?></td>
 					<td class="cart-image">
 						<a class="entry-thumbnail" href="detail.html">
-						    <img src="admin/productimages/<?php echo $row['proid'];?>/<?php echo $row['pimg1'];?>" alt="" width="84" height="146">
+						    <img src="admin/productimages/<?php 	echo htmlentities($row['opid']);?>/<?php echo htmlentities($row['pimg1']);?>" alt="" width="84" height="146">
 						</a>
+
 					</td>
 					<td class="cart-product-name-info">
 						<h4 class='cart-product-description'><a href="product-details.php?pid=<?php echo $row['opid'];?>">
@@ -125,15 +134,31 @@ while($row=mysqli_fetch_array($query))
 						<?php echo $qty=$row['qty']; ?>   
 		            </td>
 					<td class="cart-product-sub-total"><?php echo $price=$row['pprice']; ?>  </td>
-					<td class="cart-product-sub-total"><?php echo $shippcharge=$row['shippingcharge']; ?>  </td>
+					<!-- <td class="cart-product-sub-total"><?php //echo $shippcharge=$row['shippingcharge']; ?>  </td> -->
 					<td class="cart-product-grand-total"><?php echo (($qty*$price)+$shippcharge);?></td>
 					<td class="cart-product-sub-total"><?php echo $row['paym']; ?>  </td>
-					<td class="cart-product-sub-total"><?php echo $row['odate']; ?>  </td>
+					<td class="cart-product-sub-total"><?php echo $row['odate'];
+					?>  </td>
 					
 					<td>
- <a href="javascript:void(0);" onClick="popUpWindow('track-order.php?oid=<?php echo htmlentities($row['orderid']);?>');" title="Track order">
+ 						<a href="javascript:void(0);" onClick="popUpWindow('track-order.php?oid=<?php echo htmlentities($row['orderid']);?>');" title="Track order">
 					Track</td>
+					<td>
+						<a href="return.php?oid=<?php echo $row['orderid'];?>"  onClick="return confirm('Are you sure you want to Return?')" class="btn btn-danger">Return</a>
+
+
+						<!-- <div class="control-group">
+											<div class="controls"> -->
+												<!-- <button type="submit" name="submitDeleteBtn" class="btn btn-danger">Return</button> -->
+										<!-- 	</div>
+										</div> -->
+
+	</td>					
 				</tr>
+
+
+
+
 <?php $cnt=$cnt+1;} ?>
 				
 			</tbody>
@@ -182,6 +207,13 @@ while($row=mysqli_fetch_array($query))
 		});
 	</script>
 
+	<!-- <?php //echo " $currentDate";?>
+</br>
+<?php //echo "$ordDate";?>
+</br>
+	<?php// echo "Difference between two dates: "
+    . ($currentDate - $orderdate)///60/60/24;?> 
+ -->
 </body>
 </html>
 <?php } ?>

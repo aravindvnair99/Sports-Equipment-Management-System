@@ -111,7 +111,7 @@ echo "<script>alert('Shipping Address has been updated');</script>";
 				<div class="col-md-12 col-sm-12 already-registered-login">
 
 <?php
-$query=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
+$query=mysqli_query($con,"select * from users natural join shipbill where id='".$_SESSION['id']."'");
 while($row=mysqli_fetch_array($query))
 {
 ?>
@@ -161,7 +161,7 @@ while($row=mysqli_fetch_array($query))
 						      <div class="panel-body">
 						     
 				<?php
-$query=mysqli_query($con,"select * from users where id='".$_SESSION['id']."'");
+$query=mysqli_query($con,"select * from users natural join shipbill where users.id='".$_SESSION['id']."'");
 while($row=mysqli_fetch_array($query))
 {
 ?>
@@ -169,7 +169,9 @@ while($row=mysqli_fetch_array($query))
 					<form class="register-form" role="form" method="post">
 <div class="form-group">
 					    <label class="info-title" for="Shipping Address">Shipping Address<span>*</span></label>
-					    <textarea class="form-control unicase-form-control text-input" " name="shippingaddress" required="required"><?php echo $row['shippingAddress'];?></textarea>
+					    <textarea class="form-control unicase-form-control text-input" "name="shippingaddress" required="required"> value="<?php echo $row['shippingAddress'];?>"
+					    	
+					    </textarea>
 					  </div>
 
 
