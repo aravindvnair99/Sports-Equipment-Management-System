@@ -1093,7 +1093,7 @@ li.dropdown.current-user .dropdown-menu li a {
 	border: none !important;
 }
 
-.pagination.pagination-green li.disabled a, .pagination-green .pagination li.disabled a,{
+.pagination.pagination-green li.disabled a, .pagination-green .pagination li.disabled a{
 color: #AAAAAA !important;
 }
 .pagination.pagination-green li.disabled a:hover, .pagination-green .pagination li.disabled a:hover, .pagination.pagination-green li.disabled a:focus, .pagination-green .pagination li.disabled a:focus {
@@ -3044,7 +3044,7 @@ body.error-full-page {
 /* ---------------------------------------------------------------------- */
 /*	Inline Editor
 /* ---------------------------------------------------------------------- */
-}
+
 #inline-container [contenteditable="true"] {
 	padding: 10px;
 }
