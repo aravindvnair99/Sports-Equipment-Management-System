@@ -1,25 +1,34 @@
-body, .main-container, .footer, .main-navigation, ul.main-navigation-menu > li > ul.sub-menu, .navigation-small ul.main-navigation-menu > li > ul.sub-menu {
-	background-color: #F6F6F6 !important;
+body,
+.main-container,
+.footer,
+.main-navigation,
+ul.main-navigation-menu > li > ul.sub-menu,
+.navigation-small ul.main-navigation-menu > li > ul.sub-menu {
+	background-color: #f6f6f6 !important;
 }
-.layout-boxed header, .layout-boxed .main-container, .layout-boxed .footer {
-
-	border-left-color: #C8C7CC;
-	border-right-color: #C8C7CC;
+.layout-boxed header,
+.layout-boxed .main-container,
+.layout-boxed .footer {
+	border-left-color: #c8c7cc;
+	border-right-color: #c8c7cc;
 }
 .navbar-inverse {
 	background: rgba(255, 255, 255, 0.9);
-	border-color: #C8C7CC;
+	border-color: #c8c7cc;
 }
 /* ie8 fixes */
 .ie8 .navbar-inverse {
 	background: #ffffff;
 }
 /**/
-.navbar-inverse .navbar-brand, .navbar-inverse .navbar-brand:hover, .navbar-inverse .nav > li > a {
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .nav > li > a {
 	color: #666666;
 }
-.navbar-inverse .navbar-brand i, .navbar-inverse .navbar-brand:hover i {
-	color: #007AFF;
+.navbar-inverse .navbar-brand i,
+.navbar-inverse .navbar-brand:hover i {
+	color: #007aff;
 }
 
 .navbar-inverse .nav > li > a {
@@ -32,37 +41,51 @@ body, .main-container, .footer, .main-navigation, ul.main-navigation-menu > li >
 	display: inline-block;
 	text-align: center;
 	width: 1.25em;
-	color: #007AFF !important;
+	color: #007aff !important;
 	font-size: 12px;
 }
-.navbar-inverse .nav > li:hover > a, .navbar-inverse .nav > li:active > a {
+.navbar-inverse .nav > li:hover > a,
+.navbar-inverse .nav > li:active > a {
 	color: #555555;
-	background: #F5F5F5;
+	background: #f5f5f5;
 }
-.navbar-inverse .nav li.dropdown.open > .dropdown-toggle, .navbar-inverse .nav li.dropdown.active > .dropdown-toggle, .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
-	background: #D9D9D9;
+.navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+.navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+	background: #d9d9d9;
 	color: #555555;
 }
 
 .navbar-tools .dropdown-menu li .dropdown-menu-title {
-	background: #D9D9D9;
+	background: #d9d9d9;
 	color: #555555;
 }
 .navbar-inverse .btn-navbar {
-	background-color: #D9D9D9;
-	background: -moz-linear-gradient(top, #34485e 0%, #283b52 100%); /* firefox */
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#34485e), color-stop(100%,#283b52)); /* webkit */
+	background-color: #d9d9d9;
+	background: -moz-linear-gradient(
+		top,
+		#34485e 0%,
+		#283b52 100%
+	); /* firefox */
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0%, #34485e),
+		color-stop(100%, #283b52)
+	); /* webkit */
 }
 
 .nav > li.dropdown .dropdown-toggle .badge {
-	background-color: #007AFF;
+	background-color: #007aff;
 	border: none;
 }
 .navbar-toggle {
 	background-color: #ffffff;
 }
-.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
-	background-color: #D9D9D9;
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+	background-color: #d9d9d9;
 	-moz-box-shadow: 0 0 15px #fff;
 	-webkit-box-shadow: 0 0 15px #fff;
 	box-shadow: 0px 0px 15px #fff;
@@ -73,32 +96,36 @@ body, .main-container, .footer, .main-navigation, ul.main-navigation-menu > li >
 
 ul.main-navigation-menu > li a {
 	border-bottom: none;
-	border-top-color: #C8C7CC;
+	border-top-color: #c8c7cc;
 	color: #555555;
 }
 ul.main-navigation-menu > li a > i {
-	color: #007AFF;
+	color: #007aff;
 	font-weight: normal;
 }
 ul.main-navigation-menu > li.active > a {
-	background: #007AFF !important;
+	background: #007aff !important;
 	border-top: none !important;
 	color: #fff;
 }
 ul.main-navigation-menu > li.active > a .selected:before {
-	color: #007AFF !important;
+	color: #007aff !important;
 }
 ul.main-navigation-menu > li.active > a i {
 	color: #fff;
 }
-ul.main-navigation-menu > li.open > a, ul.main-navigation-menu > li > a:hover, ul.main-navigation-menu > li:hover > a {
-	background-color: #D9D9D9;
+ul.main-navigation-menu > li.open > a,
+ul.main-navigation-menu > li > a:hover,
+ul.main-navigation-menu > li:hover > a {
+	background-color: #d9d9d9;
 }
-.navigation-toggler, .go-top {
-	background-color: #E4E5E6 !important;
-	color:#b1b1b1;
+.navigation-toggler,
+.go-top {
+	background-color: #e4e5e6 !important;
+	color: #b1b1b1;
 }
-.navigation-toggler:hover i:first-child, .go-top:hover {
+.navigation-toggler:hover i:first-child,
+.go-top:hover {
 	color: #555555;
 }
 .navigation-toggler:hover i:last-child {
@@ -111,19 +138,21 @@ ul.main-navigation-menu > li.open > a, ul.main-navigation-menu > li > a:hover, u
 	color: #555555;
 }
 
-ul.main-navigation-menu li > ul.sub-menu > li.open > a, ul.main-navigation-menu li > ul.sub-menu > li.active > a, ul.main-navigation-menu li > ul.sub-menu > li > a:hover {
+ul.main-navigation-menu li > ul.sub-menu > li.open > a,
+ul.main-navigation-menu li > ul.sub-menu > li.active > a,
+ul.main-navigation-menu li > ul.sub-menu > li > a:hover {
 	color: #000000 !important;
-	background: #D9D9D9 !important;
+	background: #d9d9d9 !important;
 }
 .breadcrumb i {
 	color: #cccccc;
 }
 .breadcrumb a {
-	color: #007AFF;
+	color: #007aff;
 }
 .footer-fixed .footer {
 	background: rgba(255, 255, 255, 0.9) !important;
-	border-top-color: #C8C7CC;
+	border-top-color: #c8c7cc;
 }
 /* ie8 fixes */
 .ie8 .footer-fixed .footer {
@@ -135,12 +164,12 @@ ul.main-navigation-menu li > ul.sub-menu > li.open > a, ul.main-navigation-menu 
 }
 
 .main-content .container {
-	border-left: 1px solid #D9D9D9;
-	border-bottom: 1px solid #D9D9D9;
+	border-left: 1px solid #d9d9d9;
+	border-bottom: 1px solid #d9d9d9;
 }
 body.rtl .main-content .container {
 	border-left: none;
-	border-right: 1px solid #D9D9D9;
+	border-right: 1px solid #d9d9d9;
 }
 @media (max-width: 767px) {
 	.navbar-inverse {
@@ -148,13 +177,13 @@ body.rtl .main-content .container {
 	}
 	.navbar-tools {
 		background: rgba(255, 255, 255, 0.9);
-		border-top-color: #C8C7CC;
+		border-top-color: #c8c7cc;
 	}
 	/* ie8 fixes */
 	.ie8 .navbar-tools {
 		background: #ffffff;
 	}
-/**/
+	/**/
 	.navbar-header {
 		background-color: #fff;
 	}

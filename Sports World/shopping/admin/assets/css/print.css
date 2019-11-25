@@ -1,7 +1,7 @@
 .navbar {
 	display: none;
 }
-.main-navigation{
+.main-navigation {
 	display: none;
 }
 .hidden-print {
@@ -20,7 +20,7 @@
 	margin: 0 !important;
 	padding: 0 !important;
 }
-.main-content .container{
+.main-content .container {
 	min-height: auto !important;
 	border: none !important;
 }
