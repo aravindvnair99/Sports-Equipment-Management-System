@@ -142,7 +142,7 @@ if (strlen($_SESSION['login']) == 0) {
 		</div>
 		<?php include('includes/footer.php'); ?>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		<script src="assets/js/bootstrap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/js/bootstrap.min.js"></script>
 		<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
 		<script src="assets/js/owl.carousel.min.js"></script>
 		<script src="assets/js/echo.min.js"></script>
