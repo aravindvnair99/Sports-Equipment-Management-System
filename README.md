@@ -1,13 +1,13 @@
 # Sports Equipment Management System
 
-## Abstract
+## :scroll: Abstract
 
 This project aims to implement the organizing, monitoring and reporting on any equipment used by sports facilities such as training centres, gymnasiums, stadiums, sports federations and universities. We, as sports equipment managers take care of procurement, maintenance, and the disposal of sports gear for our company, Raspberry.
 
 ## Contributors
 
--   Chethan _17CO113 (171468)_
--   Gauri V. Nair _17CO116 (171033)_
+-   **Chethan** - _17CO113 (171468)_ - [cn14](https://github.com/cn14)
+-   **Gauri V. Nair** - _17CO116 (171033)_ - [gaurivn](https://github.com/gaurivn)
 
 ## Sports equipment
 
@@ -23,7 +23,7 @@ This project aims to implement the organizing, monitoring and reporting on any e
 -   Ability to reserve equipment in advance
 -   Invoice generation
 
-## Technical statistics
+## :memo: Technical statistics
 
 -   Number of tables - 8
 -   Frontend - HTML, CSS, JS
