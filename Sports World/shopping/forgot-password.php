@@ -38,7 +38,7 @@ if (isset($_POST['change'])) {
 	<meta name="keywords" content="MediaCenter, Template, eCommerce">
 	<meta name="robots" content="all">
 	<title>Sports World | Forgot Password</title>
-	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.2.0/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 	<link rel="stylesheet" href="assets/css/green.css">
 	<link rel="stylesheet" href="assets/css/owl.carousel.css">
