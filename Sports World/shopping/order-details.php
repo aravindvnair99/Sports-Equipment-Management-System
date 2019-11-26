@@ -32,7 +32,7 @@ include('includes/config.php');
 	<link href="assets/css/orange.css" rel="alternate stylesheet" title="Orange color">
 	<link href="assets/css/dark-green.css" rel="alternate stylesheet" title="Darkgreen color">
 	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
-	<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500,700' rel='stylesheet' type='text/css'>
 	<link rel="shortcut icon" href="assets/images/favicon.ico">
 	<script language="javascript" type="text/javascript">
 		var popUpWin = 0;
