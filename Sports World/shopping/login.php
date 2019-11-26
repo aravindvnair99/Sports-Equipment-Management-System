@@ -188,7 +188,7 @@ if (isset($_POST['login'])) {
 		<script src="assets/js/bootstrap-slider.min.js"></script>
 		<script src="assets/js/jquery.rateit.min.js"></script>
 		<script type="text/javascript" src="assets/js/lightbox.min.js"></script>
-		<script src="assets/js/bootstrap-select.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
 		<script src="switchstylesheet/switchstylesheet.js"></script>
