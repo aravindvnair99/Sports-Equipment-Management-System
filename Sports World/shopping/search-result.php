@@ -202,7 +202,7 @@ if (isset($_GET['pid']) && $_GET['action'] == "wishlist") {
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-hover-dropdown/2.0.11/bootstrap-hover-dropdown.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>
 	<script src="assets/js/echo.min.js"></script>
-	<script src="assets/js/jquery.easing-1.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 	<script src="assets/js/bootstrap-slider.min.js"></script>
 	<script src="assets/js/jquery.rateit.min.js"></script>
 	<script type="text/javascript" src="assets/js/lightbox.min.js"></script>
