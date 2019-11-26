@@ -132,7 +132,7 @@ include('includes/config.php');
 		</div>
 	</div>
 	<?php include('includes/footer.php'); ?>
-	<script src="assets/js/jquery-1.11.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 	<script src="assets/js/bootstrap.min.js"></script>
 	<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
 	<script src="assets/js/owl.carousel.min.js"></script>

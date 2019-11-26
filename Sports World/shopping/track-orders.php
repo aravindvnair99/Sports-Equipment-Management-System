@@ -72,7 +72,7 @@ include('includes/config.php');
 					</div>
 				</div>
 			</div>
-			<div <?php echo include('includes/brands-slider.php'); ?> </div> </div> <?php include('includes/footer.php'); ?> <script src="assets/js/jquery-1.11.1.min.js">
+			<div <?php echo include('includes/brands-slider.php'); ?> </div> </div> <?php include('includes/footer.php'); ?> <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js">
 				</script>
 				<script src="assets/js/bootstrap.min.js"></script>
 				<script src="assets/js/bootstrap-hover-dropdown.min.js"></script>
