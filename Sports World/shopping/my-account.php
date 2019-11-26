@@ -183,7 +183,7 @@ if (strlen($_SESSION['login']) == 0) {
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
 		<script src="assets/js/bootstrap-slider.min.js"></script>
 		<script src="assets/js/jquery.rateit.min.js"></script>
-		<script type="text/javascript" src="assets/js/lightbox.min.js"></script>
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.6.2/js/bootstrap-select.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/scripts.js"></script>
